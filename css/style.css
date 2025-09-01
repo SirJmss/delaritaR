@@ -3,144 +3,208 @@
       margin: 0;
       padding: 0;
     }
-   body {
+
+    body {
       font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f5e8d7;
-      color: #4a2c2a;
+      background-color: #4a5d5a;
+      color: #333;
       line-height: 1.6;
     }
+
     header {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       padding: 20px;
-      background-color: #f5e8d7;
+      background-color: #e9ecec;
+      max-width: 1200px;
+      margin: 0 auto;
+      border: 1px solid #ddd;
     }
-    header nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    header nav ul li a {
-      color: #4a2c2a;
+
+    header nav a {
+      color: #333;
       text-decoration: none;
-      font-size: 1em;
+      margin-left: 20px;
+      font-size: 0.9em;
     }
+
     .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background-color: #d9b99b;
       position: relative;
+      text-align: center;
+      padding: 100px 20px;
+      background-color: #e9ecec;
+      max-width: 1200px;
+      margin: 0 auto;
+      border: 1px solid #ddd;
     }
+
+    .hero::before {
+      content: '';
+      background: url(../images/pexels-craytive-1696726.jpg) no-repeat center center/cover;
+      opacity: 0.1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
     .hero h1 {
       font-size: 3em;
-      color: #fff;
       font-weight: 400;
-      margin-bottom: 20px;
+      color: #333;
+      margin-bottom: 10px;
     }
-    .hero p {
-      font-size: 1.1em;
-      color: #fff;
-      max-width: 600px;
-      margin: 0 auto 30px;
-    }
-    .hero .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-    }
-    .hero .buttons button {
-      background-color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 20px;
-      cursor: pointer;
-    }
-    .product-stats {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 40px 20px;
-      background-color: #f5e8d7;
-      text-align: center;
-    }
-    .product-stats div {
-      max-width: 200px;
-    }
-    .product-stats h2 {
-      font-size: 2.5em;
-      color: #4a2c2a;
-      margin: 0;
-    }
-    .product-stats p {
-      font-size: 1em;
+
+    .hero span {
+      font-size: 1.2em;
       color: #666;
     }
-    .categories {
-      padding: 80px 20px;
-      background-color: #fff;
-      text-align: center;
-    }
-    .categories h2 {
-      font-size: 2em;
-      color: #4a2c2a;
+.articles {
+  padding: 80px 20px;
+  background-color: #e9ecec;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.articles .grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.articles .item {
+  width: 250px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.articles .image-placeholder {
+  width: 100%; /* Full width of the .item div */
+  height: 150px; /* Matches the height from the previous design */
+  background-color: #ddd; /* Optional: keeps the placeholder background */
+  position: relative;
+}
+
+.articles .image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+       .articles h2 {
+      font-size: 1.8em;
+      font-weight: 400;
+      color: #333;
       margin-bottom: 40px;
     }
-    .category-grid {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
+    .articles .item h3 {
+      font-size: 1.1em;
+      margin-bottom: 10px;
     }
-    .category {
-      background-color: #f5e8d7;
-      padding: 20px;
-      width: 200px;
-      border-radius: 10px;
-      text-align: center;
-    }
-    .category img {
-      max-width: 100%;
-      height: auto;
-    }
-    .category h3 {
-      font-size: 1.2em;
-      margin: 10px 0;
-    }
-    .category p {
+
+    .articles .item p {
       font-size: 0.9em;
       color: #666;
     }
-    .additional {
+
+.about {
+  display: flex;
+  padding: 80px 20px;
+  background-color: #e9ecec;
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+}
+
+.about .image-placeholder {
+  width: 50%; /* Matches the flex layout design */
+  height: 300px; /* Matches the height from the previous design */
+  background-color: #ddd; /* Optional: keeps the placeholder background */
+  position: relative;
+}
+
+.about .image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.about .content {
+  width: 50%;
+  padding: 0 20px;
+  text-align: left;
+}
+
+    .about h2 {
+      font-size: 1.8em;
+      font-weight: 400;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 1em;
+      color: #666;
+    }
+
+    .subscribe {
       padding: 80px 20px;
-      background-color: #f5e8d7;
+      background-color: #d9e1e1;
+      max-width: 1200px;
+      margin: 0 auto;
       text-align: center;
+      border: 1px solid #ddd;
     }
-    .additional h2 {
-      font-size: 2em;
-      color: #4a2c2a;
-      margin-bottom: 40px;
+
+    .subscribe h2 {
+      font-size: 1.8em;
+      font-weight: 400;
+      color: #333;
+      margin-bottom: 20px;
     }
-    .additional-grid {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
+
+    .subscribe p {
+      font-size: 1em;
+      color: #666;
+      margin-bottom: 20px;
     }
-    .additional-item {
-      background-color: #fff;
-      padding: 20px;
-      width: 200px;
-      border-radius: 10px;
-      text-align: center;
+
+    .subscribe input {
+      padding: 10px;
+      width: 250px;
+      margin-right: 10px;
     }
-    .additional-item img {
-      max-width: 100%;
-      height: auto;
+
+    .subscribe button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
-    .image-placeholder {
-      width: 100%;
-      height: 200px;
-      background-color: #ddd;
-      margin: 20px 0;
-    }
+
+
+
+
+
+
